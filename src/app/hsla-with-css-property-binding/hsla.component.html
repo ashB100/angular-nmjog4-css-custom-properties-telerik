@@ -1,0 +1,35 @@
+<main>
+  <section>
+      <div>
+        <label for="hue">Hue: </label>
+        <input id="hue" type="range" min="0" max="360" [formControl]="hue">
+      </div>
+
+      <div>
+        <label for="saturation">Saturation: </label>
+        <input id="saturation" type="range" min="0" max="100" [formControl]="saturation">
+      </div>
+
+      <div>
+        <label for="lightness">Lightness: </label>
+        <input id="lightness" type="range" min="0" max="100" [formControl]="lightness">
+      </div>
+
+      <div>
+        <label for="opacity">Opacity: </label>
+        <input id="opacity" type="range" min="0" max="1" step="0.1" [formControl]="opacity">
+      </div>
+
+  </section>
+
+    <section>
+    <p [style.color]="getColor()">
+        hsla({{ hue.value }}, {{ saturation.value }}, {{ lightness.value }}, {{ opacity.value }})
+      </p>
+      <div id="color-demo"
+        [style.background-color]="getColor()"
+      ></div>
+
+    </section>
+
+</main>

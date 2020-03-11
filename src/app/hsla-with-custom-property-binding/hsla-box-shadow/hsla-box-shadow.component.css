@@ -1,0 +1,15 @@
+.color-demo {
+  width: 50px;
+  height: 50px;
+  background-color: hsla(var(--hue), var(--saturation), var(--lightness), var(--opacity));
+
+  box-shadow: 55px 0 hsla(var(--hue), var(--saturation), calc(var(--lightness) - 5%), var(--opacity)),
+  0 55px hsla(var(--hue), var(--saturation), calc(var(--lightness) - 10%), var(--opacity)),
+  55px 55px hsla(var(--hue), var(--saturation), calc(var(--lightness) - 15%), var(--opacity));
+}
+
+:host {
+  display: block;
+  padding: 1em 1em 4.5em;
+  border: 5px solid var(--border-color);
+}

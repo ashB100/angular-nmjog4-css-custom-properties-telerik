@@ -1,0 +1,16 @@
+:host {
+  display: block;
+  padding: 1em;
+  border: 5px solid var(--border-color);
+}
+
+.text-color {
+  color: hsla(var(--hue), var(--saturation), var(--lightness), var(--opacity));
+  /* font-variant-numeric: tabular-nums; */
+}
+
+.color-demo {
+  width: 100px;
+  height: 100px;
+  background-color: hsla(var(--hue), var(--saturation), var(--lightness), var(--opacity));
+}

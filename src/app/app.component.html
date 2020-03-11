@@ -1,0 +1,33 @@
+<!-- <nav>
+	<ul>
+		<li><a routerLink="/css-property-binding">Style binding to CSS property</a></li>
+		<li><a routerLink="/custom-property-binding">Style binding to CSS custom property (with div scope)</a></li>
+		<li><a routerLink="/custom-property-binding/main-scope">(with main scope)</a></li>
+		<li><a routerLink="/custom-property-binding/hostbinding">(with hostbinding)</a></li>
+		<li><a routerLink="/custom-property-binding/box-shadow">(with box-shadow)</a></li>
+		<li><a routerLink="/custom-property">Custom property</a></li>
+	</ul>
+</nav> -->
+<nav>
+<mat-toolbar color="primary">
+	<mat-toolbar-row>
+		<span>Interactive color with style binding</span>
+	</mat-toolbar-row>
+	<mat-toolbar-row>
+		<button mat-button routerLink="/css-property-binding">CSS Properties</button>
+
+		<mat-menu #appMenu="matMenu">
+			<button mat-menu-item routerLink="/custom-property-binding" routerLinkActive="active">With <b>inline-element</b> scope</button>
+			<button mat-menu-item routerLink="/custom-property-binding/main-scope" routerLinkActive="active">With <b>template-wide</b> scope</button>
+			<button mat-menu-item routerLink="/custom-property-binding/hostbinding" routerLinkActive="active">With <b>hostbinding</b></button>
+			<button mat-menu-item routerLink="/custom-property-binding/box-shadow" routerLinkActive="active">With <b>box-shadow</b></button>
+      <button mat-menu-item routerLink="/custom-property" routerLinkActive="active"><b>Without</b> style binding</button>
+		</mat-menu>
+
+		<button mat-button [matMenuTriggerFor]="appMenu">CSS Custom Properties</button>
+
+	</mat-toolbar-row>
+</mat-toolbar>
+</nav>
+
+<router-outlet></router-outlet>

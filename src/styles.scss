@@ -1,0 +1,21 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+html {
+  --border-color: gray;
+}
+
+/* main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+} */
+
+label {
+  display: inline-block;
+  width: 80px;
+}
+
+input {
+  position: relative;
+  top: 3px;
+}

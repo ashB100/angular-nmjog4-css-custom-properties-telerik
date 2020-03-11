@@ -1,0 +1,15 @@
+:host {
+  display: block;
+  padding: 1em;
+  border: 5px solid var(--user-selected-color);
+}
+
+.color-demo {
+  width: 100px;
+  height: 100px;
+  background-color: var(--user-selected-color);
+}
+
+.text-color {
+  color: var(--user-selected-color);
+}

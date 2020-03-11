@@ -1,0 +1,10 @@
+#color-demo {
+  width: 100px;
+  height: 100px;
+}
+
+:host {
+  display: block;
+  padding: 1em;
+  border: 5px solid var(--border-color);
+}
