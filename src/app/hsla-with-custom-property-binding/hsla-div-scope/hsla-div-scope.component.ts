@@ -6,14 +6,9 @@ import { FormControl } from '@angular/forms';
   templateUrl: './hsla-div-scope.component.html',
   styleUrls: ['./hsla-div-scope.component.css']
 })
-export class HslaDivScopeComponent implements OnInit {
+export class HslaDivScopeComponent  {
   hue = new FormControl(320);
   saturation = new FormControl(100);
   lightness = new FormControl(40);
   opacity = new FormControl(1);
-  constructor() { }
-
-  ngOnInit() {
-  }
-
 }
