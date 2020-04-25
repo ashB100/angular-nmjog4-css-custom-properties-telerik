@@ -1,52 +1,55 @@
-<main >
-  <section>
-
-      <div>
-        <label for="hue">Hue: </label>
-        <input id="hue" type="range" min="0" max="360" [formControl]="hue">
+<main>
+	<section class="flex-row-container justify-space-evenly">
+		<div>
+			<div>
+				<label for="hue">Hue: </label>
+				<input id="hue" type="range" min="0" max="360" [formControl]="hue">
       </div>
 
-      <div>
-        <label for="saturation">Saturation: </label>
-        <input id="saturation" type="range" min="0" max="100" [formControl]="saturation">
+			<div>
+				<label for="saturation">Saturation: </label>
+				<input id="saturation" type="range" min="0" max="100" [formControl]="saturation">
       </div>
 
-      <div>
-        <label for="lightness">Lightness: </label>
-        <input id="lightness" type="range" min="0" max="100" [formControl]="lightness">
+			<div>
+				<label for="lightness">Lightness: </label>
+				<input id="lightness" type="range" min="0" max="100" [formControl]="lightness">
       </div>
 
-      <div>
-        <label for="opacity">Opacity: </label>
-        <input id="opacity" type="range" min="0" max="1" step="0.1" [formControl]="opacity">
+			<div>
+				<label for="opacity">Opacity: </label>
+				<input id="opacity" type="range" min="0" max="1" step="0.1" [formControl]="opacity">
       </div>
+		</div>
 
-  </section>
+		<div>
+			<p class="demo-text">
+				hsla(
+          <span class="fixed-width">{{hue.value}},</span>
+<span class="fixed-width">{{saturation.value}},</span>
+<span class="fixed-width">{{lightness.value}},</span>
+<span class="fixed-width">{{opacity.value}}</span>)
+			</p>
 
-    <section>
-      <p class="text-color">
-        hsla({{hue.value}}, {{saturation.value}}, {{lightness.value}}, {{opacity.value}})
-      </p>
+			<div class="color-demo"></div>
+		</div>
 
-      <div class="color-demo"></div>
-    </section>
 
-<section [style.--blend-mode]="mode.value">
-  <label>Blend mode</label>
-  <select [formControl]="mode">
+	</section>
+
+	<section [style.--blend-mode]="mode.value">
+		<label>Blend mode</label>
+		<select [formControl]="mode">
     <option *ngFor="let blendMode of blendMode"  [ngValue]="blendMode">
       {{ blendMode }}
     </option>
   </select>
 
 
-  <div class="img-container">
-    <!-- <img src="https://images.unsplash.com/photo-1515248101569-f6e91c070aa8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt=""> -->
-    </div>
-  </section>
+		<div class="img-container">
+			<!-- <img src="https://images.unsplash.com/photo-1515248101569-f6e91c070aa8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt=""> -->
+		</div>
+	</section>
 
 
 </main>
-
-
-
