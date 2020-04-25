@@ -13,3 +13,18 @@
 .text-color {
   color: var(--user-selected-color);
 }
+
+.img-container {
+  width: 500px;
+  height: 200px;
+  max-width: 80%;
+  background-image: url('https://images.unsplash.com/photo-1515248101569-f6e91c070aa8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60');
+  background-color: var(--user-selected-color);
+  background-size: cover;
+  background-blend-mode: var(--blend-mode);
+}
+
+/* img {
+  max-width: 100%;
+  height: auto;
+} */
