@@ -1,6 +1,7 @@
 <main>
 	<section class="flex-row-container justify-space-evenly">
 		<div>
+      <h2>Background Color</h2>
 			<div>
 				<label for="hue">Hue: </label>
 				<input id="hue" type="range" min="0" max="360" [formControl]="hue">
@@ -38,16 +39,16 @@
 	</section>
 
 	<section [style.--blend-mode]="mode.value">
-		<label>Blend mode</label>
+		<h2>Image with background color and blend mode</h2>
+
+    <label for="">Blend mode:</label>
 		<select [formControl]="mode">
     <option *ngFor="let blendMode of blendMode"  [ngValue]="blendMode">
       {{ blendMode }}
     </option>
-  </select>
-
+    </select>
 
 		<div class="img-container">
-			<!-- <img src="https://images.unsplash.com/photo-1515248101569-f6e91c070aa8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt=""> -->
 		</div>
 	</section>
 
