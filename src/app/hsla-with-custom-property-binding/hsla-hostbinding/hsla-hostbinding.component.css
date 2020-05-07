@@ -22,15 +22,16 @@ select {
 }
 
 .color-demo {
-  width: 50px;
-  height: 50px;
+  width: 1em;
+  height: 1em;
   background-color: var(--user-selected-color);
   margin: auto;
 }
 
 .demo-text {
   color: var(--user-selected-color);
-  margin-top: 0;
+  /* text-align: center; */
+  /* margin-top: 0; */
 }
 
 .fixed-width {

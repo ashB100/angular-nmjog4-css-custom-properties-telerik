@@ -1,47 +1,44 @@
 <main>
-	<section class="flex-row-container justify-space-evenly">
-		<div>
-      <h2>Background Color</h2>
+	<section>
+			<h2>Background Color</h2>
 			<div>
 				<label for="hue">Hue: </label>
 				<input id="hue" type="range" min="0" max="360" [formControl]="hue">
       </div>
 
 			<div>
-				<label for="saturation">Saturation: </label>
-				<input id="saturation" type="range" min="0" max="100" [formControl]="saturation">
+					<label for="saturation">Saturation: </label>
+					<input id="saturation" type="range" min="0" max="100" [formControl]="saturation">
       </div>
 
 			<div>
-				<label for="lightness">Lightness: </label>
-				<input id="lightness" type="range" min="0" max="100" [formControl]="lightness">
+						<label for="lightness">Lightness: </label>
+						<input id="lightness" type="range" min="0" max="100" [formControl]="lightness">
       </div>
 
 			<div>
 				<label for="opacity">Opacity: </label>
 				<input id="opacity" type="range" min="0" max="1" step="0.1" [formControl]="opacity">
       </div>
-		</div>
 
-		<div>
-			<p class="demo-text">
-				hsla(
-          <span class="fixed-width">{{hue.value}},</span>
-<span class="fixed-width">{{saturation.value}},</span>
-<span class="fixed-width">{{lightness.value}},</span>
-<span class="fixed-width">{{opacity.value}}</span>)
-			</p>
+			<div class="flex-row-container">
+				<p class="demo-text">
+					hsla(
+					<span class="fixed-width">{{hue.value}},</span>
+					<span class="fixed-width">{{saturation.value}},</span>
+					<span class="fixed-width">{{lightness.value}},</span>
+					<span class="fixed-width">{{opacity.value}}</span>)
+				</p>
 
-			<div class="color-demo"></div>
-		</div>
-
+			  <div class="color-demo"></div>
+		  </div>
 
 	</section>
 
 	<section [style.--blend-mode]="mode.value">
-		<h2>Image with background color and blend mode</h2>
+		
 
-    <label for="">Blend mode:</label>
+		<label for=""><h2>Background blend mode</h2></label>
 		<select [formControl]="mode">
     <option *ngFor="let blendMode of blendMode"  [ngValue]="blendMode">
       {{ blendMode }}
