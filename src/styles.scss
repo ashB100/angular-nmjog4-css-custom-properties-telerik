@@ -4,6 +4,15 @@ html {
   --border-color: gray;
 }
 
+body {
+  user-select: none;
+  margin: 0;
+  padding: 0;
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
 /* main {
   display: flex;
   flex-wrap: wrap;

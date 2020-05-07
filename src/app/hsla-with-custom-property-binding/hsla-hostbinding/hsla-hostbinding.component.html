@@ -22,24 +22,20 @@
       </div>
 
 			<div class="flex-row-container">
-				<p class="demo-text">
-					hsla(
-					<span class="fixed-width">{{hue.value}},</span>
-					<span class="fixed-width">{{saturation.value}},</span>
-					<span class="fixed-width">{{lightness.value}},</span>
-					<span class="fixed-width">{{opacity.value}}</span>)
-				</p>
+        <div class="color-demo"></div>
 
-			  <div class="color-demo"></div>
+        <p style="color: var(--user-selected-color)">hsla({{hue.value}}, {{saturation.value}}, {{lightness.value}}, {{opacity.value}})</p>
 		  </div>
-
 	</section>
 
 	<section [style.--blend-mode]="mode.value">
+    <h2>
+      <label for="mode">
+        Background blend mode
+      </label>
+    </h2>
 		
-
-		<label for=""><h2>Background blend mode</h2></label>
-		<select [formControl]="mode">
+		<select [formControl]="mode" id="mode">
     <option *ngFor="let blendMode of blendMode"  [ngValue]="blendMode">
       {{ blendMode }}
     </option>

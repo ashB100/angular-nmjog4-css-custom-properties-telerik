@@ -1,7 +1,10 @@
 :host {
   display: block;
-  padding: 1em;
-  border: 5px solid var(--user-selected-color);
+  padding: 2em;
+  margin: 1em;
+  min-width: 200px;
+  border: 5px ridge var(--user-selected-color);
+  border-radius: 20px/30px;
 }
 
 section {
@@ -13,26 +16,29 @@ h2 {
 }
 
 label {
-  display: inline-block;
-  width: 100px;
+  display: block;
+  width: 100%;
 }
+
 select {
-  display: inline-block;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
+  font-size: 1em;
+  line-height: 1.5;
+  padding: 0.5em;
+  outline: none;
 }
+
 
 .color-demo {
   width: 1em;
   height: 1em;
   background-color: var(--user-selected-color);
-  margin: auto;
+  margin: auto 1em auto 0;
 }
 
-.demo-text {
+/* .demo-text {
   color: var(--user-selected-color);
-  /* text-align: center; */
-  /* margin-top: 0; */
-}
+} */
 
 .fixed-width {
     display: inline-block;
