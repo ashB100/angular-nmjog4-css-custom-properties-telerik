@@ -7,6 +7,14 @@
   border-radius: 20px/30px;
 }
 
+main {
+    --accent-color: hsla(
+    calc(var(--hue) + 180), 
+    var(--saturation), 
+    var(--lightness),
+    var(--opacity));
+}
+
 section {
   margin-bottom: 2em;
 }
@@ -24,8 +32,15 @@ select {
   margin-bottom: 2em;
   font-size: 1em;
   line-height: 1.5;
-  padding: 0.5em;
+  height: 30px;
+  width: 200px;
   outline: none;
+  border: 1px solid var(--accent-color);
+  background: transparent;
+}
+
+select:hover {
+  box-shadow: 0 0 3px var(--accent-color);
 }
 
 
@@ -33,7 +48,15 @@ select {
   width: 1em;
   height: 1em;
   background-color: var(--user-selected-color);
-  margin: auto 1em auto 0;
+  margin: auto 1em 1em 0;
+  /* box-shadow: 3px 3px 3px hsla(var(--hue), var(--saturation), calc(var(--lightness) + 5%), var(--opacity)); */
+}
+
+.complement-demo {
+    width: 1em;
+  height: 1em;
+  background-color: var(--accent-color);
+  margin: auto 1em 1em 0;
 }
 
 /* .demo-text {
