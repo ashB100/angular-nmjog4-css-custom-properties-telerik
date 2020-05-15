@@ -23,11 +23,6 @@ h2 {
   margin-top: 0;
 }
 
-label {
-  display: block;
-  width: 100%;
-}
-
 select {
   margin-bottom: 2em;
   font-size: 1em;
@@ -42,7 +37,6 @@ select {
 select:hover {
   box-shadow: 0 0 3px var(--accent-color);
 }
-
 
 .color-demo {
   width: 1em;

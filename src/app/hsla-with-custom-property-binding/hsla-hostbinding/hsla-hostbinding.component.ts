@@ -11,8 +11,8 @@ export class HslaHostbindingComponent  {
   saturation = new FormControl(100);
   lightness = new FormControl(40);
   opacity = new FormControl(1);
-
   mode = new FormControl('overlay');
+
   blendMode = ['normal', 'multiply', 'screen', 'overlay', 'darken', 'lighten', 'color-dodge', 'color-burn', 'hard-light', 'soft-light', 'difference', 'exclusion', 'hue', 'saturation', 'color', 'luminosity'];
   
   @HostBinding('style.--user-selected-color') get hslaColor() {
